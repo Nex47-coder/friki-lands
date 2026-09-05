@@ -6,6 +6,9 @@
   <meta name="description" content="Friki Lands — comunidad y servidor de Discord.">
   <title>FRIKI LANDS — Bizarre Community</title>
 
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+
   <meta property="og:title" content="FRIKI LANDS — Bizarre Community">
   <meta property="og:description" content="Un lugar extraño. Una comunidad aún más extraña. Únete a nuestro Discord.">
   <meta property="og:type" content="website">
@@ -20,7 +23,23 @@
   <!-- ============ HERO (split-screen) ============ -->
   <header class="hero">
     <nav>
-      <a class="logo" href="#inicio"><img src="logo.svg?v=2" alt="" class="logo-mark">FRIKI<br><span>LANDS</span></a>
+      <a class="logo" href="#inicio">
+        <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8b35ff"/>
+              <stop offset="100%" stop-color="#ff3cac"/>
+            </linearGradient>
+          </defs>
+          <rect x="6" y="6" width="188" height="188" rx="18" fill="#09060f" stroke="url(#logoGrad)" stroke-width="6"/>
+          <rect x="6" y="6" width="188" height="188" rx="18" fill="url(#logoGrad)" opacity="0.12"/>
+          <text x="100" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900"
+                font-size="100" fill="#f7f4ff" stroke="#f7d56d" stroke-width="2" paint-order="stroke"
+                transform="skewX(-8) translate(-16 0)">FL</text>
+          <polygon points="163,38 168,50 180,52 171,60 173,72 163,66 153,72 155,60 146,52 158,50" fill="#f7d56d"/>
+        </svg>
+        FRIKI<br><span>LANDS</span>
+      </a>
       <div class="nav-links">
         <a href="#staff">STAFF</a>
         <a href="#ambiente">AMBIENTE</a>
