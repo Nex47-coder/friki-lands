@@ -18,14 +18,8 @@
 </head>
 <body>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO (split-screen) ============ -->
   <header class="hero">
-    <div class="duo-photo" aria-hidden="true">
-      <div class="duo-img"></div>
-      <div class="duo-tint"></div>
-      <div class="duo-dark"></div>
-    </div>
-
     <nav>
       <a class="logo" href="#inicio">FRIKI<br><span>LANDS</span> <i>★</i></a>
       <div class="nav-links">
@@ -35,38 +29,45 @@
       </div>
     </nav>
 
-    <main id="inicio" class="hero-content">
-      <div class="manga-tag">THE BIZARRE COMMUNITY</div>
-
-      <div class="hero-copy">
-        <div class="hero-sfx sfx-left">ゴゴゴ<br>ゴゴゴ</div>
-        <div class="hero-sfx sfx-right">ドドド</div>
-
+    <div id="inicio" class="hero-split">
+      <div class="hero-left">
+        <div class="manga-tag">THE BIZARRE COMMUNITY</div>
         <h1>FRIKI<br><span>LANDS</span></h1>
-        <div class="japanese-strip">奇妙な世界 • UNA COMUNIDAD BIZARRA • 奇妙な世界</div>
-
+        <div class="japanese-strip">奇妙な世界 • UNA COMUNIDAD BIZARRA</div>
         <p class="subtitle">Un lugar extraño. Una comunidad aún más extraña.</p>
         <a class="jojo-button" href="#discord">ENTRAR AL DISCORD <b>→</b></a>
       </div>
 
-      <div class="requiem-arrow" aria-hidden="true">
-        <div class="arrow-shaft"></div>
-        <div class="arrow-head"></div>
-        <div class="arrow-orb"></div>
-      </div>
+      <div class="hero-right">
+        <div class="duo-photo" aria-hidden="true">
+          <div class="duo-img"></div>
+          <div class="duo-tint"></div>
+          <div class="duo-dark"></div>
+        </div>
 
-      <div class="stand-discs" aria-hidden="true">
-        <div class="disc d1">♢</div><div class="disc d2">★</div>
-        <div class="disc d3">✦</div><div class="disc d4">◇</div>
-        <div class="disc d5">★</div>
-      </div>
+        <div class="hero-sfx sfx-right">ドドド</div>
 
-      <div class="speech-bubble">「ESTE LUGAR<br>ES BIZARRO...」</div>
-      <div class="onomatopoeia">ゴゴゴゴ</div>
-    </main>
+        <div class="requiem-arrow" aria-hidden="true">
+          <div class="arrow-shaft"></div>
+          <div class="arrow-head"></div>
+          <div class="arrow-orb"></div>
+        </div>
+
+        <div class="stand-discs" aria-hidden="true">
+          <div class="disc d1">♢</div><div class="disc d2">★</div>
+          <div class="disc d3">✦</div><div class="disc d4">◇</div>
+          <div class="disc d5">★</div>
+        </div>
+
+        <div class="speech-bubble">「ESTE LUGAR<br>ES BIZARRO...」</div>
+      </div>
+    </div>
+
+    <div class="hero-bigword" aria-hidden="true">BIZARRE</div>
   </header>
 
   <div class="section-divider div-gold"></div>
+
 
   <!-- ============ MARQUEE ============ -->
   <div class="marquee" aria-hidden="true">
@@ -87,25 +88,25 @@
     <p class="section-text">Esto es solo un vistazo — edítalo con lo que de verdad tenga tu server.</p>
 
     <div class="features-grid">
-      <div class="feature-card fc1">
+      <div class="feature-card fc1 fc-big">
         <span class="feature-number">01</span>
         <h3>MEMES 24/7</h3>
-        <p>Contenido random a cualquier hora, sin descanso.</p>
+        <p>Contenido random a cualquier hora, sin descanso. El canal que nunca duerme.</p>
       </div>
       <div class="feature-card fc2">
         <span class="feature-number">02</span>
         <h3>ARTE Y FANART</h3>
-        <p>Comparte tus dibujos, ediciones y fanarts con la comunidad.</p>
+        <p>Comparte tus dibujos, ediciones y fanarts.</p>
       </div>
       <div class="feature-card fc3">
         <span class="feature-number">03</span>
         <h3>EVENTOS</h3>
         <p>Sorteos, torneos y actividades para todos.</p>
       </div>
-      <div class="feature-card fc4">
+      <div class="feature-card fc4 fc-big">
         <span class="feature-number">04</span>
         <h3>VOICE SIEMPRE ACTIVO</h3>
-        <p>Salas de voz con gente conectada casi todo el día.</p>
+        <p>Salas de voz con gente conectada casi todo el día. Nunca vas a estar solo por aquí.</p>
       </div>
     </div>
   </section>
@@ -166,6 +167,12 @@
 
   <div class="section-divider div-purple"></div>
 
+  <div class="pull-quote">
+    <span>BE BIZARRE.</span><span>THAT'S IT.</span><span>BE BIZARRE.</span>
+  </div>
+
+  <div class="section-divider div-gold"></div>
+
   <!-- ============ DISCORD CTA ============ -->
   <section id="discord" class="discord-section">
     <div class="duo-photo" aria-hidden="true">
@@ -195,8 +202,11 @@
   </section>
 
   <footer>
-    <span>FRIKI LANDS © 2026</span>
-    <span>BE BIZARRE.</span>
+    <div class="footer-word" aria-hidden="true">FRIKI LANDS</div>
+    <div class="footer-bottom">
+      <span>FRIKI LANDS © 2026</span>
+      <span>BE BIZARRE.</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
