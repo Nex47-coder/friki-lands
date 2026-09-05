@@ -1,6 +1,6 @@
-// Efecto sutil de movimiento al pasar el ratón.
+// Efecto sutil de movimiento al pasar el ratón sobre las tarjetas.
 // No recoge datos ni envía información a ningún servidor.
-document.querySelectorAll(".member-card").forEach(card => {
+document.querySelectorAll(".feature-card").forEach(card => {
   card.addEventListener("mousemove", (event) => {
     const r = card.getBoundingClientRect();
     const x = ((event.clientX - r.left) / r.width - .5) * 4;
