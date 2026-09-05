@@ -108,6 +108,15 @@ nav {
 }
 .logo span { color: var(--gold); }
 .logo i { color: var(--pink); font-style: normal; font-size: 17px; }
+.logo-mark { height: 34px; width: 34px; margin-right: 10px; vertical-align: middle; }
+
+.discord-stats {
+  margin: 14px 0 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
 .nav-links { display: flex; gap: 30px; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
 .nav-links a { position: relative; }
 .nav-links a:hover { color: var(--gold); }
