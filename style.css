@@ -766,62 +766,85 @@ nav {
 }
 
 
-/* ===== FRIKI LANDS — REDISEÑO CON FOTOS REALES (Unsplash, uso libre) ===== */
 
-/* Portada: foto de ciudad + tormenta bajo cielo morado, con overlay para legibilidad */
-.hero {
-  background-image:
-    linear-gradient(120deg, rgba(255,60,172,.14), transparent 35%),
-    linear-gradient(300deg, rgba(139,53,255,.22), transparent 45%),
-    linear-gradient(rgba(6,4,10,.72), rgba(6,4,10,.90)),
-    url('https://images.unsplash.com/photo-1562070268-b473c84732f1?fm=jpg&q=70&w=2400&auto=format&fit=crop');
+/* ===== FRIKI LANDS — FOTOS REALES EN DUOTONO (efecto ilustración manga) ===== */
+/* Fotos: Unsplash, licencia libre de uso comercial/personal, sin atribución obligatoria. */
+
+.duo-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.duo-photo .duo-img {
+  position: absolute;
+  inset: -2%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  filter: grayscale(1) contrast(1.2) brightness(.8);
+}
+.duo-photo .duo-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(139,53,255,.9), rgba(255,60,172,.75));
+  mix-blend-mode: color;
+}
+.duo-photo .duo-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(6,4,10,.42);
 }
 
-/* STAFF: humo morado real de fondo, oscurecido para que las cards resalten */
-#staff {
-  background-image:
-    linear-gradient(rgba(11,7,16,.90), rgba(11,7,16,.97)),
-    url('https://images.unsplash.com/photo-1693761036963-0c894f78aea1?fm=jpg&q=70&w=2000&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
+/* La portada ya tiene su propio contenido en z-index positivo, así que la foto va detrás */
+.hero { isolation: isolate; }
+.hero .duo-photo { z-index: -1; }
+.hero .duo-img { background-image: url('https://images.unsplash.com/photo-1562070268-b473c84732f1?fm=jpg&q=70&w=2400&auto=format&fit=crop'); }
+.hero .duo-dark { background: rgba(6,4,10,.55); }
 
-/* Tarjetas del staff: textura de humo real en vez de gradiente plano */
+#staff { position: relative; isolation: isolate; }
+#staff .duo-img { background-image: url('https://images.unsplash.com/photo-1610323708643-db611435cd87?fm=jpg&q=70&w=2400&auto=format&fit=crop'); background-position: center 20%; }
+#staff .duo-dark { background: rgba(11,7,16,.82); }
+#staff > *:not(.duo-photo) { position: relative; z-index: 1; }
+
+.ambience-banner .duo-img { background-image: url('https://images.unsplash.com/photo-1558286506-34082b5b5a23?fm=jpg&q=70&w=2400&auto=format&fit=crop'); }
+.ambience-banner .duo-dark { background: rgba(9,6,15,.5); }
+
+.discord-section { position: relative; isolation: isolate; }
+.discord-section .duo-photo { z-index: -1; }
+.discord-section .duo-img { background-image: url('https://images.unsplash.com/photo-1575249050321-9d188b2a8b40?fm=jpg&q=70&w=2400&auto=format&fit=crop'); background-position: center 25%; }
+.discord-section .duo-dark { background: rgba(9,6,15,.65); }
+
+/* Tarjetas del staff: mismo tratamiento duotono, foto distinta y más pequeña */
 .member-card {
   background-image:
-    linear-gradient(150deg, rgba(36,17,54,.88), rgba(11,7,16,.94)),
-    url('https://images.unsplash.com/photo-1693761036963-0c894f78aea1?fm=jpg&q=60&w=1200&auto=format&fit=crop');
+    linear-gradient(150deg, rgba(139,53,255,.55), rgba(255,60,172,.4)),
+    linear-gradient(150deg, rgba(11,7,16,.55), rgba(11,7,16,.85)),
+    url('https://images.unsplash.com/photo-1610323708643-db611435cd87?fm=jpg&q=60&w=1200&auto=format&fit=crop');
+  background-blend-mode: color, normal, normal;
   background-size: cover;
   background-position: center;
+  filter: contrast(1.05);
 }
 
-/* Nueva sección AMBIENTE: banner grande con foto real */
+@media (max-width: 700px) {
+  .duo-photo .duo-img { background-attachment: scroll; }
+}
+
+/* Recomponer el layout de AMBIENTE (banner grande) ahora usando el sistema duotono */
 .ambience-banner {
   position: relative;
   min-height: 65vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1549744587-3b663f325b85?fm=jpg&q=70&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
   border-top: 4px solid var(--gold);
   border-bottom: 4px solid var(--gold);
-}
-.ambience-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(100deg, rgba(9,6,15,.35), rgba(9,6,15,.92) 65%),
-    linear-gradient(0deg, rgba(9,6,15,.75), transparent 60%);
-  z-index: 1;
+  isolation: isolate;
 }
 .ambience-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: min(1200px, 92%);
   margin: auto;
 }
@@ -834,18 +857,6 @@ nav {
   margin-top: 20px;
 }
 
-/* DISCORD: humo real de fondo, más oscuro para contraste con la caja */
-.discord-section {
-  background-image:
-    repeating-linear-gradient(125deg, transparent 0 50px, rgba(255,255,255,.03) 51px 53px),
-    linear-gradient(rgba(9,6,15,.88), rgba(9,6,15,.96)),
-    url('https://images.unsplash.com/photo-1549744587-3b663f325b85?fm=jpg&q=60&w=2000&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 700px) {
-  .hero { background-attachment: scroll; }
   .ambience-banner { min-height: 50vh; }
-  .ambience-content { text-align: left; }
 }
