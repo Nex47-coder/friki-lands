@@ -21,7 +21,7 @@ document.querySelectorAll(".feature-card").forEach(card => {
   if (!targets.length) return;
 
   try {
-    const res = await fetch("https://discord.com/api/v10/invites/bZRkCKvanz?with_counts=true");
+    const res = await fetch("https://discord.com/api/v10/invites/frikilands?with_counts=true");
     if (!res.ok) throw new Error("respuesta no válida");
     const data = await res.json();
     const text = `🟢 ${data.approximate_presence_count} online · ${data.approximate_member_count} miembros`;
