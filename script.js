@@ -25,9 +25,11 @@ document.querySelectorAll(".feature-card").forEach(card => {
     if (!res.ok) throw new Error("respuesta no válida");
     const data = await res.json();
     const text = `🟢 ${data.approximate_presence_count} online · ${data.approximate_member_count} miembros`;
+    console.log("Contador de Discord cargado:", text);
     targets.forEach(el => { el.textContent = text; });
   } catch (err) {
-    // Si falla (invitación caducada, sin conexión, etc.) simplemente lo ocultamos.
+    // Si falla (invitación caducada, sin conexión, etc.) lo mostramos en consola para poder depurarlo.
+    console.error("Error al cargar el contador de Discord:", err);
     targets.forEach(el => { el.style.display = "none"; });
   }
 })();
