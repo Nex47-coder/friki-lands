@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — FRIKI LANDS</title>
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 6%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(139,53,255,.25), transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(255,60,172,.18), transparent 45%),
+        #08050d;
+    }
+    .notfound-code {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(110px, 26vw, 260px);
+      line-height: .8;
+      letter-spacing: 4px;
+      -webkit-text-stroke: 2px #f7f4ff;
+      text-shadow: 11px 10px 0 #512092, 18px 17px 0 rgba(255,60,172,.28);
+      color: #8b35ff;
+    }
+    .notfound h2 { margin-top: 10px; }
+    .notfound p.subtitle { margin: 22px auto 34px; }
+    .notfound-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .notfound .japanese-strip { margin: 18px auto 0; }
+  </style>
+</head>
+<body>
+  <div class="notfound">
+    <div class="manga-tag">ERROR / エラー</div>
+    <div class="notfound-code">404</div>
+    <h2>ESTO NO<br><span>EXISTE</span></h2>
+    <div class="japanese-strip">奇妙な世界 • NI SIQUIERA EN UN MUNDO BIZARRO</div>
+    <p class="subtitle">La página que buscas no está aquí. Puede que el link esté roto o que se la haya llevado un Stand.</p>
+    <div class="notfound-actions">
+      <a class="jojo-button" href="/friki-lands/">VOLVER AL INICIO <b>→</b></a>
+      <a class="jojo-button" href="https://discord.gg/bZRkCKvanz" target="_blank" rel="noopener noreferrer">IR AL DISCORD <b>↗</b></a>
+    </div>
+  </div>
+</body>
+</html>
